@@ -1,0 +1,14 @@
+.addStyle{
+    font-size:20px;
+    color: rgb(126, 184, 184);
+}
+
+.removeStyle
+    {
+        color: black;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }

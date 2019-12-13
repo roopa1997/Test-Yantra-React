@@ -1,0 +1,14 @@
+This keyword:
+
+1. If we use this globally or inside named function ,
+it will be equal to window in non strict mode.
+
+2. When we invoke object methods or functions using object reference ,
+ this===the object.
+
+3. If we use new keyword and create object to the constructor function or class , 
+this === the object.
+
+4. If we call constructor function as normal function , this===window.
+
+5. Inside arrow function this will be equal to parent context this.

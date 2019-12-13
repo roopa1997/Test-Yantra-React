@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul className="topnav">
+        <li><a className="active" href="#home">Home </a></li>
+        <li className="right"><a href="#">Register </a></li>
+        <li className="right"><a href="#about">Login</a></li>
+    </ul>
+    <div class="container" id="loginContainer">
+        <div className="card col-md-6 offset-3" style={logincard}>
+
+            <form name="userForm" className="formclass mt-2" id="form1">
+                <div className="form-group ">
+                    <label for="email">Email</label>
+                    <input type="text" className="form-control" id="email" name="email" placeholder="enter email" />
+                    <p id="p3 " className=" invisible">enter a valid email</p>
+                </div>
+
+                <div className="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" className="form-control" id="password" name="password"
+                        placeholder="enter password" />
+                    <p id="p5" className=" invisible">enter password correctly</p>
+                </div>
+                <div className="form-group ">
+                    <div className="row">
+                        <div className="col-md-6"><button type="button" id="formSubmitButton"
+                                className="btn btn-success ">Login</button>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="container" id="registerContainer">
+        <div className="card col-md-6 offset-3 ">
+            <form name="userForm" className="formclass mt-2 " id="form1">
+                <div className="form-group ">
+
+                    <div className="input-group mb-3">
+                        <div className="input-group-prepend">
+                            <span className="input-group-text" id="name" name="name">Name</span>
+                        </div>
+                        <input type="text" className="form-control" placeholder="enter name" />
+
+                    </div>
+
+                    <div className="input-group mb-3">
+                        <div className="input-group-prepend">
+                            <span className="input-group-text" id="age" name="age">age</span>
+                        </div>
+                        <input type="number" className="form-control" placeholder="enter age" />
+                    </div>
+                    <div className="input-group mb-3">
+                        <div className="input-group-prepend">
+                            <span className="input-group-text" id="age" phone="age">phone</span>
+                        </div>
+                        <input type="number" className="form-control" placeholder="enter phone" />
+                    </div>
+                    <div className="input-group mb-3">
+                        <div className="input-group-prepend">
+                            <span className="input-group-text" id="email" phone="email">email</span>
+                        </div>
+                        <input type="email" className="form-control" placeholder="enter email" />
+                    </div>
+                    <div className="input-group mb-3">
+                        <div className="input-group-prepend">
+                            <span className="input-group-text" id="password" phone="password">password</span>
+                        </div>
+                        <input type="password" className="form-control" placeholder="enter password" />
+                    </div>
+                </div>
+                <div className="form-group ">
+                    <div className="row">
+                        <div className="col-md-6"><button type="button" id="formSubmitButton"
+                                className="btn btn-success">Submit</button>
+                        </div>
+                        <div className="col-md-6"><button type="button" id="formClearButton"
+                                className="btn btn-success float-right">Clear</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

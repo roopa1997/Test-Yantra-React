@@ -1,0 +1,39 @@
+1. sum of multiples of array 
+Input : a = 4, N = 23
+Output : sum = 60
+[Multiples : 4, 8, 12, 16, 20]
+
+logic: 
+sum=o;
+for(int i=0; i<N.length;i++){
+if(i%a==0){
+sum=sum+1
+}
+}
+-------------------------------------------------
+2. using reduce function 
+var numbers = [175, 50, 25];
+return the sum of elements 
+
+logic:
+function myFunc(total, num) {
+  return total + num;
+}
+let a = numbers.reduce(myFunc)
+---------------------------------------------------
+3. split method 
+given a string split it where ever there is a delimiter 
+string str = "hello-this-is-java";
+string [] temp;
+string delimit = "-";
+temp = str.split("delimit");
+for(int i=0;i<temp.length;i++){
+System.out.println(temp[i])
+}
+-----------------------------------------------------
+4. substring
+string str =" hello"
+if(str.length()>=2){
+return str.substring(0,2);
+}
+return str;
