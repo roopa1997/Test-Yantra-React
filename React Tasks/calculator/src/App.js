@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import ResultComponent from './components/ResultComponent';
 import KeyPadComponent from "./components/KeyPadComponent";
 
-class App extends Component {
+class App extends React.Component {
     constructor(){
         super();
 
@@ -72,7 +72,7 @@ class App extends Component {
         return (
             <div>
                 <div className="calculator-body">
-                    <h1>Simple Calculator</h1>
+                    <h1>CALCULATOR</h1>
                     <ResultComponent result={this.state.result}/>
                     <KeyPadComponent onClick={this.onClick}/>
                 </div>

@@ -1,0 +1,15 @@
+
+.card{
+    width: 16rem;
+    height: 30rem;
+  padding: 5px;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+img{
+    width: 16rem;
+    height: 23rem;
+}
+.card:hover{
+    box-shadow: 0 0 4px 1px rgb(124, 52, 52);
+}

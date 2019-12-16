@@ -1,0 +1,38 @@
+.result {
+  height: 60px;
+  background-color: goldenrod;
+  width: 100%;
+}
+
+.result p {
+  font-size: 40px;
+  margin: 5px;
+
+}
+
+.calculator-body {
+  max-width: 500px;
+  margin: auto;
+}
+
+.button {
+  display: block;
+  background-color: white;
+  
+}
+
+button {
+  width: 25%;
+  height: 60px;
+  font-size: 30px;
+  color: white;
+  background-color: rgb(8, 3, 4);
+  border-radius: 50%;
+  border-color: rgb(8, 3, 4);
+  padding: 2px;
+
+}
+button:hover{
+  box-shadow: 0 0 1px 3px #555353;
+
+}

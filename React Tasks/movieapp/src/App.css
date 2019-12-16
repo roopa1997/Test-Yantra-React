@@ -1,0 +1,23 @@
+h3{
+    width: 100vw;
+    height: 8vh;
+    background-color: cadetblue;
+    text-align: center;
+}
+#search{
+ margin-top: 1%;
+width: 30vw;
+height: 6vh;
+margin-left: 33%;
+border: 1px solid grey;
+
+}
+button{
+    background-color: cadetblue;
+    height: 6vh;
+    border: 1px solid grey;
+    color: rgb(14, 8, 8);
+}
+.movieContainer{
+    margin-top: 2%;
+}

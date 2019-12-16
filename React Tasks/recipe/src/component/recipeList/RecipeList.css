@@ -1,0 +1,33 @@
+img{
+    width: 300px;
+    height: 130px;
+}
+.card{
+    width: 300px;
+    height: 100px;
+
+   
+    margin-top: 5px;
+    font-style: italic;
+       
+        margin: 5px;
+        height: 180px;
+        color: #9c3519;
+        background-color: #e9ecef;
+        
+    
+}
+
+.card:hover{
+    
+    color: rgb(7, 68, 7);
+    text-shadow: 0px 0px 1px black;
+    box-shadow: 7px 2px 7px 2px #6e5f1c;
+}
+.listClass{
+    margin-bottom: 7%;
+}
+.cardTitle{
+    text-align: center;
+    padding-top: 3%;
+}
