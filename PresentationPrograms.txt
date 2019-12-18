@@ -37,3 +37,70 @@ if(str.length()>=2){
 return str.substring(0,2);
 }
 return str;
+------------------------------------------------------
+5.check if array has 0 or -1 , return true if it doet have.
+
+ int[] array_nums = {50, 77, 12, 54, -11};
+	System.out.println("Original Array: "+Arrays.toString(array_nums)); 
+	System.out.println("Result: "+test(array_nums));
+    }	
+    public static boolean test(int[] numbers) {
+    for (int number : numbers) {
+      if (number == 0 || number == -1) {
+        return false;
+      }
+    }
+    return true;
+-----------------------------------------------------
+6. anagrams 
+given to strings , we check if they are anagrams or not. Anagrams are those strings who have same characters and same friequencies of characters in it.
+
+steps:
+1. convert to upper case or lower case
+2. convert string to character
+3. sort the array
+4. for(int i = 0; i < a.length; i++) 
+            if(a[i] != b[i])
+---------------------------------------------------------
+7. sum of first 3 elements of consecuive numbers
+given an array check if it is consecutive or not and find the sum of ny three elements
+1. sort the array
+2. check if it is consecutive 
+3. returm sum of 3 elemens
+for(int i=o;i<a.length;i++){
+if(a[i+1]-a[1]==1){
+return true
+}
+else{
+return false
+}
+--------------------------------------------------------
+8. compare if array has duplicate values 
+String[] my_array = {"bcd", "abd", "jude", "bcd", "oiu", "gzw", "oiu"};
+ 
+        for (int i = 0; i < my_array.length-1; i++)
+        {
+            for (int j = i+1; j < my_array.length; j++)
+            {
+                if( (my_array[i].equals(my_array[j])) && (i != j) )
+                {
+                    System.out.println("Duplicate Element is : "+my_array[j]);
+                }
+            }
+        }
+---------------------------------------------------------------
+9. 
+--------------------------------------------------------
+10. insertion sort 
+void insertionSort(int arr[]){
+ for( int i = 0 ;i < n ; i++ ) {
+      int temp = A[ i ];    
+      int j = i;
+          while(  j > 0  && temp < A[ j -1]) {
+                A[ j ] = A[ j-1];   
+                j= j - 1;
+           }
+           A[ j ] = temp;       
+     }  
+}
+--------------------------------------------------------------
