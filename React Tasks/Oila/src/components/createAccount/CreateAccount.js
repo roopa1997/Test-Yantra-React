@@ -1,65 +1,142 @@
 import React from 'react'
-function CreateAccount(props) {
+import { render } from '@testing-library/react'
+class CreateAccount extends React.Component {
+    constructor(props) {
+        super(props)
 
-    let registercard = {
-        boxShadow: "0 0 7px 0px grey",
-        marginTop: "7%"
+    }
+    state = {
+        uname: '',
+        showName: false,
+        password: '',
+        showPassword: false,
+        phone: '',
+        showPhone: false,
+        email: '',
+        showEmail: false
+    }
+    
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name] : event.target.value
+        })
+       
+        console.log(this)
+
+    }
+    handleSubmit = (event) => {
+        event.preventDefault();
+        const { name } = this.state
+       if (this.state.uname.match(/^([a-zA-Z ]){2,8}$/)) {
+            this.setState({
+                showName: false
+            })
+        } else {
+            this.setState({
+                showName: true
+            })
+        }  
+         if (this.state.password.match(/^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/)) {
+            this.setState({
+                showPassword: false
+            })
+        }
+            else {
+                this.setState({
+                    showPassword: true
+                })
+        } 
+        if(this.state.phone.match(/^[0-9]{10}$/)){
+            this.setState({
+                showPhone: false
+            })
+        }else{
+            this.setState({
+                showPhone: true
+            })
+        }
+        if(this.state.email.match(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/ )){
+            this.setState({
+                showEmail: false
+            })
+        }else{
+            this.setState({
+                showEmail: true
+            })
+        }
     }
 
-    return (
+    render() {
+        let registercard = {
+            boxShadow: "0 0 7px 0px grey",
+            marginTop: "7%"
+        }
+        const errorStyle = {
+            color: 'red',
+            fontSize: '15px'
+        }
 
-        < div className="card col-md-6 offset-3 " style={registercard} >
-            <form name="userForm" className="formclass mt-2 " id="form1">
-                <div className="form-group ">
 
-                    <div className="input-group mb-3">
-                        <div className="input-group-prepend">
-                            <span className="input-group-text" id="name" name="name">Name</span>
-                        </div>
-                        <input type="text" className="form-control" placeholder="enter name" />
 
-                    </div>
+        return (
 
-                    <div className="input-group mb-3">
-                        <div className="input-group-prepend">
-                            <span className="input-group-text" id="age" name="age">age</span>
-                        </div>
-                        <input type="number" className="form-control" placeholder="enter age" />
-                    </div>
-                    <div className="input-group mb-3">
-                        <div className="input-group-prepend">
-                            <span className="input-group-text" id="age" phone="age">phone</span>
-                        </div>
-                        <input type="number" className="form-control" placeholder="enter phone" />
-                    </div>
-                    <div className="input-group mb-3">
-                        <div className="input-group-prepend">
-                            <span className="input-group-text" id="email" phone="email">email</span>
-                        </div>
-                        <input type="email" className="form-control" placeholder="enter email" />
-                    </div>
-                    <div className="input-group mb-3">
-                        <div className="input-group-prepend">
-                            <span className="input-group-text" id="password" phone="password">password</span>
-                        </div>
-                        <input type="password" className="form-control" placeholder="enter password" />
-                    </div>
-                </div>
-                <div className="form-group ">
-                    <div className="row">
-                        <div className="col-md-6"><button type="button" id="formSubmitButton"
-                            className="btn btn-success">Submit</button>
-                        </div>
-                        <div className="col-md-6"><button type="button" id="formClearButton"
-                            className="btn btn-success float-right">Clear</button>
-                        </div>
+            <div className=" card col-md-4 offset-4 mt-5 ">
+                <form className="form " onSubmit={this.handleSubmit} >
+                    <legend className="h1 card-header">Create Form</legend>
+                    <div className="form-group">
+                        <label htmlFor="">User Name</label>
+                        <input type="text"
+                            name="uname"
+                            className="form-control"
+                            placeholder="enter username"
+                            value={this.state.uname}
+                            onChange={this.handleChange} />
 
                     </div>
+                    {this.state.showName ? <p style={errorStyle}>Invalid Userame</p> : null}
+                    <div className="form-group">
+                        <label htmlFor="">password</label>
+                        <input type="text"
+                            name="password"
+                            className="form-control"
+                            placeholder="enter password"
+                            value={this.state.password}
+                            onChange={this.handleChange} />
 
-                </div>
-            </form>
-        </div >
+                    </div>
+                    {this.state.showPassword ? <p style={errorStyle}>Invalid password</p> : null}
+                    <div className="form-group">
+                        <label htmlFor="">Phone</label>
+                        <input type="text"
+                            name="phone"
+                            className="form-control"
+                            placeholder="enter phone"
+                            value={this.state.phone}
+                            onChange={this.handleChange} />
 
-    )
+                    </div>
+                    {this.state.showPhone ? <p style={errorStyle}>Invalid phone</p> : null}
+                    <div className="form-group">
+                        <label htmlFor="">Email</label>
+                        <input type="text"
+                            name="email"
+                            className="form-control"
+                            placeholder="enter email"
+                            value={this.state.email}
+                            onChange={this.handleChange} />
+
+                    </div>
+                    {this.state.showEmail ? <p style={errorStyle}>Invalid email</p> : null}
+
+                    <button className="btn mt-3 mb-2" type="submit" className="btn btn-primary">login </button>
+
+                </form>
+            </div>
+
+          
+        )
+    }
+
 }
+
 export default CreateAccount

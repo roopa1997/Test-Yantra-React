@@ -13,9 +13,9 @@ class App extends React.Component {
     url: ''
   }
   updateInputValue = (e) => {
-    const { value } = e.target;
+     
     this.setState({
-      query: value
+      query: e.target.value
     });
   };
   search = () => {
